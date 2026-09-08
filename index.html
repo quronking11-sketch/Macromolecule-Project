@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macromolecules Project</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      padding: 70px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #172033, #355c7d);
+      color: white;
+    }
+
+    .cover {
+      max-width: 900px;
+    }
+
+    .cover .dna {
+      font-size: 80px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 8vw, 80px);
+      margin: 0 0 15px;
+    }
+
+    .cover p {
+      font-size: 21px;
+      margin: 8px;
+    }
+
+    .due {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      border: 2px solid white;
+      border-radius: 30px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0,0,0,.12);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #172033;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 16px 18px;
+    }
+
+    nav a:hover {
+      background: #e9eef5;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 20px 70px;
+    }
+
+    .intro {
+      text-align: center;
+      margin: 20px auto 45px;
+      max-width: 800px;
+    }
+
+    .intro h2 {
+      font-size: 35px;
+    }
+
+    .molecule {
+      background: white;
+      margin: 45px 0;
+      padding: 35px;
+      border-radius: 22px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.08);
+      border-top: 8px solid #355c7d;
+    }
+
+    .molecule h2 {
+      font-size: 38px;
+      margin-top: 0;
+    }
+
+    .emoji {
+      font-size: 55px;
+      float: right;
+      margin-left: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: #f4f7fb;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .facts {
+      background: #eef3f8;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 25px;
+    }
+
+    .diagram {
+      margin-top: 25px;
+      padding: 25px;
+      background: #f8fafc;
+      border: 2px dashed #9aa9b8;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .diagram .molecule-symbol {
+      font-size: 55px;
+      letter-spacing: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      background: #172033;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .molecule {
+        padding: 24px;
+      }
+
+      .emoji {
+        float: none;
+        display: block;
+      }
+
+      nav a {
+        padding: 12px 9px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- COVER PAGE -->
+  <header id="home">
+    <div class="cover">
+      <div class="dna">🧬</div>
+      <h1>Macromolecules</h1>
+      <p><strong>Carbohydrates • Lipids • Proteins • Nucleic Acids</strong></p>
+      <p>A Biology Project</p>
+      <div class="due">Due Date: September 8, 2026</div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#carbohydrates">Carbohydrates</a>
+    <a href="#lipids">Lipids</a>
+    <a href="#proteins">Proteins</a>
+    <a href="#nucleic-acids">Nucleic Acids</a>
+  </nav>
+
+  <main>
+
+    <section class="intro">
+      <h2>What Are Macromolecules?</h2>
+      <p>
+        Macromolecules are large molecules that are important to living things.
+        The four major types are carbohydrates, lipids, proteins, and nucleic acids.
+        They help organisms get energy, build structures, control processes, and store genetic information.
+      </p>
+    </section>
+
+
+    <!-- CARBOHYDRATES -->
+    <section class="molecule" id="carbohydrates">
+      <span class="emoji">🍞</span>
+      <h2>1. Carbohydrates</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Elements</h3>
+          <p>Carbohydrates mainly consist of <strong>carbon (C), hydrogen (H), and oxygen (O)</strong>.</p>
+        </div>
+
+        <div class="card">
+          <h3>Types</h3>
+          <p><strong>Monosaccharides</strong> are single sugars, while <strong>polysaccharides</strong> are long chains of sugars.</p>
+        </div>
+
+        <div class="card">
+          <h3>Examples</h3>
+          <ul>
+            <li>Glucose</li>
+            <li>Starch</li>
+            <li>Cellulose</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>How Does It Apply to My Life?</h3>
+        <p>
+          Carbohydrates are important because they provide energy for my body.
+          Foods such as bread, rice, fruits, potatoes, and pasta contain carbohydrates.
+          My body breaks down many carbohydrates into glucose, which cells can use for energy.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>What If I Couldn't Use Carbohydrates?</h3>
+        <p>
+          My body would have a harder time getting quick energy from carbohydrates.
+          I could feel tired or weak, and my body would need to rely more on other energy sources.
+        </p>
+      </div>
+
+      <div class="facts">
+        <h3>💡 Interesting Facts</h3>
+        <ol>
+          <li>Glucose is an important source of energy for cells.</li>
+          <li>Cellulose helps give plants structure and is found in plant cell walls.</li>
+        </ol>
+      </div>
+
+      <div class="diagram">
+        <h3>🎨 Diagram Idea</h3>
+        <div class="molecule-symbol">C — H — O</div>
+        <p>Draw and color a simple glucose molecule or a carbohydrate chain here.</p>
+      </div>
+    </section>
+
+
+    <!-- LIPIDS -->
+    <section class="molecule" id="lipids">
+      <span class="emoji">🥑</span>
+      <h2>2. Lipids</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Elements</h3>
+          <p>Lipids mainly contain <strong>carbon (C), hydrogen (H), and oxygen (O)</strong>. Some lipids also contain phosphorus.</p>
+        </div>
+
+        <div class="card">
+          <h3>Types</h3>
+          <p>
+            The major types include <strong>true fats, phospholipids, and steroids</strong>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Examples</h3>
+          <ul>
+            <li>Butter or animal fats</li>
+            <li>Phospholipids in cell membranes</li>
+            <li>Cholesterol</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>How Does It Apply to My Life?</h3>
+        <p>
+          Lipids are used by my body for long-term energy storage and insulation.
+          They are also important parts of cell membranes. Foods such as nuts, avocados,
+          oils, and some meats contain lipids.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>What If I Couldn't Use Lipids?</h3>
+        <p>
+          My body would have problems storing energy efficiently and maintaining healthy
+          cell membranes. Lipids also help with insulation and are involved in important
+          biological processes.
+        </p>
+      </div>
+
+      <div class="facts">
+        <h3>💡 Interesting Facts</h3>
+        <ol>
+          <li>Phospholipids form the basic structure of cell membranes.</li>
+          <li>Some steroids act as hormones that help regulate body functions.</li>
+        </ol>
+      </div>
+
+      <div class="diagram">
+        <h3>🎨 Diagram Idea</h3>
+        <div class="molecule-symbol">○ — |||</div>
+        <p>Draw and color a triglyceride or a phospholipid structure here.</p>
+      </div>
+    </section>
+
+
+    <!-- PROTEINS -->
+    <section class="molecule" id="proteins">
+      <span class="emoji">💪</span>
+      <h2>3. Proteins</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Elements</h3>
+          <p>Proteins mainly contain <strong>carbon (C), hydrogen (H), oxygen (O), and nitrogen (N)</strong>. Some also contain sulfur.</p>
+        </div>
+
+        <div class="card">
+          <h3>Types</h3>
+          <p>
+            Protein types include <strong>structural, transport, and regulatory</strong> proteins.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Examples</h3>
+          <ul>
+            <li>Hemoglobin</li>
+            <li>Keratin</li>
+            <li>Insulin</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>How Does It Apply to My Life?</h3>
+        <p>
+          Proteins help my body build and repair tissues and perform many important jobs.
+          Protein is found in foods such as eggs, beans, fish, chicken, dairy products,
+          nuts, and other foods.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>What If I Couldn't Use Proteins?</h3>
+        <p>
+          Without proteins, cells could not perform many of their normal functions.
+          My body would have difficulty building and repairing tissues, transporting
+          substances, and controlling important processes.
+        </p>
+      </div>
+
+      <div class="facts">
+        <h3>💡 Interesting Facts</h3>
+        <ol>
+          <li>Proteins are made from chains of smaller molecules called amino acids.</li>
+          <li>Enzymes are proteins that help speed up many chemical reactions in cells.</li>
+        </ol>
+      </div>
+
+      <div class="diagram">
+        <h3>🎨 Diagram Idea</h3>
+        <div class="molecule-symbol">●—●—●—●—●</div>
+        <p>Draw and color a chain of amino acids folding into a protein.</p>
+      </div>
+    </section>
+
+
+    <!-- NUCLEIC ACIDS -->
+    <section class="molecule" id="nucleic-acids">
+      <span class="emoji">🧬</span>
+      <h2>4. Nucleic Acids</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Elements</h3>
+          <p>
+            Nucleic acids contain <strong>carbon (C), hydrogen (H), oxygen (O),
+            nitrogen (N), and phosphorus (P)</strong>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Types</h3>
+          <p>
+            The two major types are <strong>DNA</strong> and <strong>RNA</strong>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Examples</h3>
+          <ul>
+            <li>DNA</li>
+            <li>mRNA</li>
+            <li>tRNA</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>How Does It Apply to My Life?</h3>
+        <p>
+          Nucleic acids are extremely important because DNA stores genetic information
+          used by my cells. RNA helps cells use that information to make proteins.
+          DNA also helps determine many inherited traits.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>What If I Couldn't Use Nucleic Acids?</h3>
+        <p>
+          Cells would not be able to properly store and use genetic information.
+          Without DNA and RNA, cells could not carry out the instructions needed
+          for normal growth, development, and protein production.
+        </p>
+      </div>
+
+      <div class="facts">
+        <h3>💡 Interesting Facts</h3>
+        <ol>
+          <li>DNA contains genetic instructions used by living organisms.</li>
+          <li>RNA can help carry genetic instructions and plays an important role in making proteins.</li>
+        </ol>
+      </div>
+
+      <div class="diagram">
+        <h3>🎨 Diagram Idea</h3>
+        <div class="molecule-symbol">🧬</div>
+        <p>Draw and color a DNA double helix and label its major parts.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Macromolecules Project</strong></p>
+    <p>Carbohydrates • Lipids • Proteins • Nucleic Acids</p>
+    <p>Created for Biology • September 2026</p>
+  </footer>
+
+</body>
+</html>
